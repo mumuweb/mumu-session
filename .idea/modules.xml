@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/mumu-session.iml" filepath="$PROJECT_DIR$/mumu-session.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mumu-session-gemfire/mumu-session-gemfire.iml" filepath="$PROJECT_DIR$/mumu-session-gemfire/mumu-session-gemfire.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mumu-session-mongo/mumu-session-mongo.iml" filepath="$PROJECT_DIR$/mumu-session-mongo/mumu-session-mongo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mumu-session-redis/mumu-session-redis.iml" filepath="$PROJECT_DIR$/mumu-session-redis/mumu-session-redis.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="mumu-session-gemfire" />
+        <module name="mumu-session-mongo" />
+        <module name="mumu-session-redis" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="mumu-session" target="1.8" />
+      <module name="mumu-session-gemfire" target="1.8" />
+      <module name="mumu-session-mongo" target="1.8" />
+      <module name="mumu-session-redis" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

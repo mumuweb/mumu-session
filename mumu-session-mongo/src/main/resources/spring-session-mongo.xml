@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/aop
+		http://www.springframework.org/schema/aop/spring-aop.xsd
+		http://www.springframework.org/schema/mvc 
+		http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+	 <!--将session放入redis -->
+	<context:annotation-config/>
+	
+	<!-- mongo客户端 -->
+	<bean id="mongo" class="com.mongodb.Mongo">
+		<constructor-arg name="host" value="${mongo.host}"/>
+		<constructor-arg name="port" value="${mongo.port}"/>
+	</bean>
+
+	<!-- mongo模板 -->
+	<bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
+		<constructor-arg name="mongo" ref="mongo"/>
+		<constructor-arg name="databaseName" value="${mongo.databaseName}"/>
+	</bean>
+	
+	<!-- 将session放入mongo -->
+	<bean id="mongoHttpSessionConfiguration"
+		  class="org.springframework.session.data.mongo.config.annotation.web.http.MongoHttpSessionConfiguration">
+		<property name="maxInactiveIntervalInSeconds" value="${mongo.maxInactiveIntervalInSeconds}" />
+		<property name="collectionName" value="${mongo.collectionName}" />
+	</bean>
+
+</beans>

@@ -1,0 +1,20 @@
+language: java
+os: linux
+env:
+  global:
+    - KAFKASERVICES=localhost:9092
+
+sudo: required
+jdk:
+  - oraclejdk8
+
+services:
+  - redis
+  - mongodb
+  - gemfire
+
+script: mvn clean install cobertura:cobertura
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
+  
