@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="mumu-session-hazelcast:war">
+    <output-path>$PROJECT_DIR$/mumu-session-hazelcast/target</output-path>
+    <root id="archive" name="hazelcast.war">
+      <element id="artifact" artifact-name="mumu-session-hazelcast:war exploded" />
+    </root>
+  </artifact>
+</component>

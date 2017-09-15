@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="mumu-session-gemfire:war exploded">
-    <output-path>$PROJECT_DIR$/mumu-session-gemfire/target/mumu-session-gemfire</output-path>
+    <output-path>$PROJECT_DIR$/mumu-session-gemfire/target/gemfire</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
@@ -32,6 +32,7 @@
           <element id="library" level="project" name="Maven: org.springframework:spring-oxm:4.3.4.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-jdbc:4.3.4.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-tx:4.3.4.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-aspects:4.3.4.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-web:4.3.4.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-aop:4.3.4.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-context:4.3.4.RELEASE" />
@@ -44,11 +45,10 @@
           <element id="library" level="project" name="Maven: commons-fileupload:commons-fileupload:1.3.1" />
           <element id="library" level="project" name="Maven: org.springframework.session:spring-session:1.3.1.RELEASE" />
           <element id="library" level="project" name="Maven: com.alibaba:fastjson:1.2.33" />
-          <element id="library" level="project" name="Maven: javax.servlet:servlet-api:2.5" />
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/mumu-session-gemfire/target/mumu-session-gemfire/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/mumu-session-gemfire/target/gemfire/META-INF/MANIFEST.MF" />
       </element>
       <element id="javaee-facet-resources" facet="mumu-session-gemfire/web/Web" />
     </root>

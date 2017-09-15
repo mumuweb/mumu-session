@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 创建hazecast实例-->
+    <bean id="hazelcastInstance" class="com.hazelcast.instance.HazelcastInstanceImpl">
+        <constructor-arg name="name" value="hazelcastInstance"></constructor-arg>
+        <constructor-arg name="config">
+            <bean id="hazelcastInstance" class="com.hazelcast.config.Config"/>
+        </constructor-arg>
+        <constructor-arg name="nodeContext">
+            <bean class="com.hazelcast.instance.DefaultNodeContext"/>
+        </constructor-arg>
+    </bean>
+    
+    <!-- 将session放入hazelcast -->
+    <bean id="hazelcastHttpSessionConfiguration"
+          class="org.springframework.session.hazelcast.config.annotation.web.http.HazelcastHttpSessionConfiguration">
+        <property name="maxInactiveIntervalInSeconds" value="1800"/>
+        <property name="sessionMapName" value="mumu:session:hazelcast"/>
+    </bean>
+
+</beans>

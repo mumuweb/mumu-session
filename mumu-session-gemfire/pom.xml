@@ -30,6 +30,49 @@
         </dependency>
     </dependencies>
     <build>
-        <finalName>mumu-session-gemfire</finalName>
+        <finalName>gemfire</finalName>
+        <plugins>
+            <!-- tomcat 启动服务 -->
+            <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <version>2.0</version>
+                <configuration>
+                    <backgroundProcessorDelay>5</backgroundProcessorDelay>
+                    <url>http://localhost:8083/gemfire</url>
+                    <server>tomcat7</server>
+                    <path>/gemfire</path>
+                    <port>8083</port>
+                </configuration>
+            </plugin>
+            <!-- jetty 启动服务 -->
+            <plugin>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <version>9.4.6.v20170531</version>
+                <configuration>
+                    <httpConnector>
+                        <port>8083</port>
+                    </httpConnector>
+                    <stopKey>stop</stopKey>
+                    <stopPort>9969</stopPort>
+                    <reload>manual</reload>
+                    <dumpOnStart>true</dumpOnStart>
+                    <webApp>
+                        <contextPath>/gemfire</contextPath>
+                    </webApp>
+                    <requestLog implementation="org.eclipse.jetty.server.NCSARequestLog">
+                        <filename>target/access-yyyy_mm_dd.log</filename>
+                        <filenameDateFormat>yyyy_MM_dd</filenameDateFormat>
+                        <logDateFormat>yyyy-MM-dd HH:mm:ss</logDateFormat>
+                        <logTimeZone>GMT+8:00</logTimeZone>
+                        <append>true</append>
+                        <logServer>true</logServer>
+                        <retainDays>120</retainDays>
+                        <logCookies>true</logCookies>
+                    </requestLog>
+                </configuration>
+            </plugin>
+        </plugins>
     </build>
 </project>

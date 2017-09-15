@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/mumu-session.iml" filepath="$PROJECT_DIR$/mumu-session.iml" />
       <module fileurl="file://$PROJECT_DIR$/mumu-session-gemfire/mumu-session-gemfire.iml" filepath="$PROJECT_DIR$/mumu-session-gemfire/mumu-session-gemfire.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mumu-session-hazelcast/mumu-session-hazelcast.iml" filepath="$PROJECT_DIR$/mumu-session-hazelcast/mumu-session-hazelcast.iml" />
       <module fileurl="file://$PROJECT_DIR$/mumu-session-mongo/mumu-session-mongo.iml" filepath="$PROJECT_DIR$/mumu-session-mongo/mumu-session-mongo.iml" />
       <module fileurl="file://$PROJECT_DIR$/mumu-session-redis/mumu-session-redis.iml" filepath="$PROJECT_DIR$/mumu-session-redis/mumu-session-redis.iml" />
     </modules>

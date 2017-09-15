@@ -8,8 +8,9 @@ import org.springframework.data.mongodb.core.MongoOperations;
 import org.springframework.data.mongodb.core.MongoTemplate;
 
 import com.mongodb.MongoClient;
+import org.springframework.session.data.mongo.config.annotation.web.http.EnableMongoHttpSession;
 
-//@EnableMongoHttpSession(maxInactiveIntervalInSeconds=3600,collectionName="springSessions")
+@EnableMongoHttpSession(maxInactiveIntervalInSeconds=3600,collectionName="springSessions")
 public class MongoConfig {
 
 	@Value("#{configProperties['mongo.host']}")

@@ -2,6 +2,7 @@
 <project version="4">
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/mumu-session-gemfire" />
+    <file type="web" url="file://$PROJECT_DIR$/mumu-session-hazelcast" />
     <file type="web" url="file://$PROJECT_DIR$/mumu-session-mongo" />
     <file type="web" url="file://$PROJECT_DIR$/mumu-session-redis" />
   </component>
